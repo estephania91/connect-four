@@ -79,7 +79,10 @@ function placeInTable(y, x) {
 /** endGame: announce game end */
 
 function endGame(msg) {
-  alert(msg);
+  const winner = document.getElementById("winner");
+  winner.innerText = msg;
+  const board = document.getElementById("board");
+  board.style.pointerEvents = "none";
 }
 
 /** handleClick: handle click of column top to play piece */
